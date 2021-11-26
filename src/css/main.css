@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Source+Code+Pro&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+    padding: 2rem;
+    overflow-y: hidden;
+}
+
+.playground{
+    display: flex;
+    height: 80vh;
+    width: 80%;
+    max-height: 90vh;
+
+    /* background-color: rgb(152, 108, 255);
+    border: 5px dashed rgb(121, 48, 255); */
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 27px;
+    padding: 30px;
+
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    /* font-family: 'Source Code Pro'; */
+    /* font-family:'Estonia'; */
+    
+    background-position: center;
+    position: relative;
+}
+
+.bottom{
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+}
+
+.tab{
+    display: inherit;
+    justify-content: space-between;
+    width: 320px;
+
+    padding: 10px;
+    background-color: rgba(190, 156, 235, 0.596);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+
+    border: 2px solid rgb(226, 210, 255);
+}
+
+.btn{
+    background-color: rgb(173, 129, 255);
+    border: 3px dashed rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 2px;
+    padding: 1rem;
+
+    max-width: 80px;
+    max-height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    font-size: 15px;
+}
+
+.btn:active{
+    transform: translate(0,3px)
+}
+
+.rainbow{
+    animation: rainbow 3s infinite forwards;
+}
+
+@keyframes rainbow {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(789deg);
+    }
+}
