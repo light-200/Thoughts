@@ -12,11 +12,11 @@ body{
     font-family: 'poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     height: 100vh;
-    padding: 2rem;
+    padding: 1.2rem;
     overflow-y: hidden;
 }
 
@@ -43,6 +43,7 @@ body{
     
     background-position: center;
     position: relative;
+    box-shadow: 1px 3px 20px 1px black;
 }
 
 .bottom{
@@ -57,16 +58,18 @@ body{
     width: 320px;
 
     padding: 10px;
-    background-color: rgba(190, 156, 235, 0.596);
+    background-color: #e5d1ff;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(1px);
 
-    border: 2px solid rgb(226, 210, 255);
+    border: 1px solid rgba(255, 255, 255, 0.397);
+    box-shadow: 1px 3px 10px 2px black;
 }
 
 .btn{
-    background-color: rgb(173, 129, 255);
-    border: 3px dashed rgb(0, 0, 0);
+    /* background-color: rgb(173, 129, 255); */
+    background-color: #d4b4ff;
+    border: 1px solid rgba(255, 255, 255, 0.438);
     border-radius: 5px;
     margin: 2px;
     padding: 1rem;
@@ -80,6 +83,8 @@ body{
 
     color: black;
     font-size: 15px;
+    box-shadow: 2px 2px 5px  black inset,
+                -2px -2px 8px white inset;
 }
 
 .btn:active{
@@ -96,5 +101,40 @@ body{
     }
     100%{
         filter: hue-rotate(789deg);
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    body{
+        padding: 5px;
+        justify-content: space-around;
+    }
+    .playground{
+        display: flex;
+        height: 80vh;
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .bottom{
+        position: absolute;
+        bottom: 0;
+       
+    }
+    .bottom,.tab{
+        width: 100%;
+        justify-content: space-evenly;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .btn{
+        border: none;
+        background-color: #cfbce5;
+        font: bolder;
+
+        box-shadow: 1px 1px 3px  black inset,
+                -1px -1px 5px white inset;
     }
 }
